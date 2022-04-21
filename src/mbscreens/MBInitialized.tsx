@@ -1,6 +1,5 @@
 import React, {useContext, useEffect} from "react";
 import {Image, View} from "react-native";
-import {Camera} from "expo-camera";
 import * as MediaLibrary from "expo-media-library";
 import * as Notifications from "expo-notifications";//
 import * as Location from "expo-location";
@@ -19,7 +18,6 @@ export default function MBInitialized() {
 
     useEffect(() => {
         async function loadPermissions() {
-            await Camera.requestPermissionsAsync();
             await MediaLibrary.requestPermissionsAsync();
             await Notifications.requestPermissionsAsync();
             await Location.requestForegroundPermissionsAsync();
